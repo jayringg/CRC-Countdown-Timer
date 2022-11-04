@@ -27,6 +27,17 @@ function initializeClock(id, endtime) {
     clock.innerHTML = t.hours + ' :' +
                       t.minutes + ' :' +
                       t.seconds;
+    
+      if (t.minutes < 10) {
+          clock.innerHTML = t.hours + ' :' + '0' + t.minutes + ' :' + t.seconds; 
+        }
+        if (t.minutes > 10 && t.seconds < 10 ) {
+          clock.innerHTML = t.hours + ' :' + t.minutes + ' :' + '0' + t.seconds; 
+        }
+        if (t.minutes < 10 && t.seconds < 10 || t.minutes === 0 && t.seconds < 10) {
+          clock.innerHTML = t.hours + ' :' + '0' + t.minutes + ' :' + '0' + t.seconds;
+        } 
+
     if (t.total <= 0) {
       clearInterval(timeinterval);
       wait = () => alert('Time\'s Up!');
