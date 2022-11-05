@@ -9,5 +9,34 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     color: #FFCE54;
-    font-size: 12vw;
+    font-size: 10vw;
 }
+#buttonStart {
+   background: #FFCE54;
+   color: #2D3132;
+   padding: 1vw 2vw;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 1.5vw;
+   text-transform: uppercase;
+   margin:.5vw .25vw ;
+   position: absolute;
+   top: 80%;
+   left: 40%;
+}
+
+#buttonClear {
+    background: #FFCE54;
+    color: #2D3132;
+    padding: 1vw 2vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    margin:.5vw .25vw ;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+ }
