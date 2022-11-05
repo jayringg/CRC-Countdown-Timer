@@ -9,15 +9,20 @@
 </head>
 <body>
 
-    <div id="numberInput">
-        <label for="timer"></label>
-        <input type="number" id="startingTime"><br />
-    </div>
-    
-    <div id="buttons">
-        <button onclick="timerStart()">start</button>
-    </div>
-    <div id="clockdiv"></div>
+   <div id="clockdiv">
+     <span class="hours">00</span>
+     <span class="separatorOne"> :</span>
+     <span class="minutes">00</span>
+     <span class="separatorTwo"> :</span>
+     <span class="seconds">00</span>
+   </div>
+
+<div>
+    <button id = "buttonStart" onclick="timerStart()">start</button>
+</div>
+<div>
+    <button id = "buttonClear" onclick="window.location.reload();">clear</button>
+</div>
     
     <script src="script.js"></script>
 </body>
