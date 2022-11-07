@@ -1,5 +1,5 @@
 function timerStart() {
-    let time = prompt('Enter number of minutes'); 
+    let time = prompt('Enter number of minutes', '10'); 
     const timeInMinutes = (time);
     const currentTime = Date.parse(new Date());
     const deadline = new Date(currentTime + timeInMinutes*60*1000);
