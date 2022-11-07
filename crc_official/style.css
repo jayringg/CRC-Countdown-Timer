@@ -1,20 +1,61 @@
 * {
     background-color: #2D3132;
 }
-#clockdiv {
+img {
+   max-width: 100%;
+   height: auto;
+   width: 12vw;
+   height: 12vw; 
+   float: left;
+   color: black;
+}
+
+.hours {
     margin: 0;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    top: 35%;
+    left: 22%;
     color: #FFCE54;
-    font-size: 10vw;
+    font-size: 12vw;  
 }
+.separatorOne {
+    margin: 0;
+    position: absolute;
+    top: 33.5%;
+    left: 38%;
+    color: #FFCE54;
+    font-size: 12vw; 
+}
+.minutes {
+    margin: 0;
+    position: absolute;
+    top: 35%;
+    left: 44.5%;
+    color: #FFCE54;
+    font-size: 12vw; 
+}
+.separatorTwo {
+    margin: 0;
+    position: absolute;
+    top: 33.5%;
+    left: 60.5%;
+    color: #FFCE54;
+    font-size: 12vw; 
+}
+.seconds {
+    margin: 0;
+    position: absolute;
+    top: 35%;
+    left: 67%;
+    color: #FFCE54;
+    font-size: 12vw;  
+} 
+
+
 #buttonStart {
    background: #FFCE54;
    color: #2D3132;
-   padding: 1vw 2vw;
+   padding: .7vw 2vw;
    text-align: center;
    text-decoration: none;
    display: inline-block;
@@ -23,13 +64,15 @@
    margin:.5vw .25vw ;
    position: absolute;
    top: 80%;
-   left: 40%;
+   left: 40.5%;
+   border-radius: .75vw;
 }
+#buttonStart:hover {background-color: #f7b100;}
 
 #buttonClear {
     background: #FFCE54;
     color: #2D3132;
-    padding: 1vw 2vw;
+    padding: .7vw 2vw;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -38,5 +81,8 @@
     margin:.5vw .25vw ;
     position: absolute;
     top: 80%;
-    left: 50%;
+    left: 51.5%;
+    border-radius: .75vw;
  }
+ #buttonClear:hover {background-color: ##f7b100;}
+ 
