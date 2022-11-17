@@ -1,10 +1,16 @@
 function timerStart() {
-    let time = prompt('Enter number of minutes', '10'); 
-    const timeInMinutes = (time);
+    
+  let time = prompt('Enter number of minutes', '10'); 
+  const timeInMinutes = Number(time);
+
+    if (Number.isNaN(timeInMinutes) || timeInMinutes === 0 || timeInMinutes < 0) {
+      return 0;
+    } 
+    
     const currentTime = Date.parse(new Date());
     const deadline = new Date(currentTime + timeInMinutes*60*1000);
-    
-    function getTimeRemaining(endtime){
+     
+      function getTimeRemaining(endtime){
       const total = Date.parse(endtime) - Date.parse(new Date());
       const seconds = Math.floor( (total/1000) % 60 );
       const minutes = Math.floor( (total/1000/60) % 60 );
@@ -36,18 +42,18 @@ function timerStart() {
         minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
         separatorTwo.innerHTML = ' :';
         secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-        
+
         if (t.total <= 0) {
           clearInterval(timeinterval);
           wait = () => alert('Time\'s Up!');
           setTimeout(wait, 1000); 
         }
-      }
       
-      updateClock(); // run function once at first to avoid delay
+      }
+
+      updateClock(); 
       var timeinterval = setInterval(updateClock,1000);
     }
 
-    initializeClock('clockdiv', deadline);
-
-  }
+    initializeClock('clockdiv', deadline); 
+}
