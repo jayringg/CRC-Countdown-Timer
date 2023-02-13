@@ -1,5 +1,11 @@
+let isRunning = false;
+
 function timerStart() {
-    
+  if (isRunning) {
+    return;
+  }
+  isRunning = true;
+
   let time = prompt('Enter number of minutes', '10'); 
   const timeInMinutes = Number(time);
 
@@ -46,9 +52,11 @@ function timerStart() {
         if (t.total <= 0) {
           clearInterval(timeinterval);
           wait = () => alert('Time\'s Up!');
-          setTimeout(wait, 1000); 
+          setTimeout(wait, 1000);
+          setTimeout(function(){
+            isRunning = false;
+          }, 1000); 
         }
-      
       }
 
       updateClock(); 
@@ -57,3 +65,5 @@ function timerStart() {
 
     initializeClock('clockdiv', deadline); 
 }
+
+isRunning = false;
